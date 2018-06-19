@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DATASET UPLOAD</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+hr { width:100%; height:3px; background: white; border: 0px;}
+
+input[type=reset] {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    float: right;
+    margin: 5px;
+}
+
+input[type=reset]:hover {
+    background-color: #b37400;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 6px 6px 6px;
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+input[type=submit] {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    float: right;
+    margin: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: #b37400;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #666666;
+    padding: 20px;
+    margin: 10px
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p {
+    color: orange;
+    font-family: Roboto !important;
+    font-size: 42pt !important;
+    font-weight: 200 !important;
+    margin: 0px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+    </style>
+</head>
+<body bgcolor="#231F20">
+
+<div class="container">
+    <form action="http://localhost:5000/predict" method="POST" enctype='multipart/form-data'>
+        <div class="container">
+            <p>Predict Labels</p>
+            <hr/>
+            <div class="row">
+                <div class="col-25">
+                    <label>Enter feature name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="feature_predict">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Enter filename of the model:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="filename_2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Unlabelled .csv filename:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="csv_name">
+                </div>
+            </div>
+            <hr/>
+            <label>File: <input name="myFile_predict" type="file"/></label>
+            <input type="reset" value="Reset"/>
+            <input type="submit" value="OK"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

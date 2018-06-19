@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">// <![CDATA[
+        function preloader(){
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }//preloader
+        window.onload = preloader;
+// ]]>
+</script>
+    <title>Error</title>
+    <style>
+
+{
+    font-family: Roboto, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+hr { width:100%; height:3px; background: white; border: 0px;}
+h2 {
+    color: orange;
+    font-family: Roboto !important;
+    font-size: 38pt !important;
+    font-weight: 200 !important;
+    margin: 0px;
+}
+p {
+    color: white;
+    font-family: Roboto !important;
+    font-size: 14pt !important;
+    font-weight: 200 !important;
+    margin: 0px;
+}
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+.container {
+    border-radius: 5px;
+    background-color: #666666;
+    padding: 20px;
+    margin: 10px
+}
+    </style>
+</head>
+<body bgcolor="#231F20">
+<div class="container">
+    <H2> Oops! There's something wrong!</H2>
+    <hr/>
+    <p>Check if you have typed the name of your file rightly...</p>
+    <p>Press the back button of your browser</p>
+</div>
+</body>
+</html>
